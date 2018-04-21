@@ -47,14 +47,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/finom/matreshka-binders-file.git"
+    "url": "https://github.com/finom/common-binders.git"
   },
   "author": "Andrey Gubanov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/finom/matreshka-binders-file/issues"
+    "url": "https://github.com/finom/common-binders/issues"
   },
-  "homepage": "https://github.com/finom/matreshka-binders-file#readme",
+  "homepage": "https://github.com/finom/common-binders#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-istanbul": "^0.12.2",
