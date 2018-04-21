@@ -19,11 +19,13 @@ In browser environment these functions live at ``window.commonBinders`` object.
 ```
 
 ```js
+const { bindNode } = defi;
 const {
 	attr, className, dataset, display,
 	existence, html, prop, style, text
 } = commonBinders;
-// ...
+const obj = {};
+
 bindNode(obj, 'key', node, html());
 
 // if you don't want to create variables
