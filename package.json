@@ -6,7 +6,7 @@
     "test-run": "babel-node node_modules/.bin/babel-istanbul cover test/index.js",
     "unit": "npm run test-run && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "unit-defi": "LIBRARY=defi npm run test-run",
-    "upgrade": "ncu --upgradeAll -x semantic-release && npm install",
+    "upgrade": "ncu --upgradeAll -x semantic-release,semantic-release-cli && npm install",
     "lint": "eslint ./test ./src",
     "compile-npm": "babel src -d .",
     "bundle": "webpack --mode=production",
@@ -86,6 +86,7 @@
     "npm-check-updates": "^2.14.1",
     "rimraf": "^2.6.2",
     "semantic-release": "^8.0.3",
+    "semantic-release-cli": "^2.0.1",
     "validate-commit-msg": "^2.14.0",
     "webpack": "^4.5.0",
     "webpack-cli": "^2.0.15"
