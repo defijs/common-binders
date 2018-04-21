@@ -12,6 +12,7 @@ export default function dataset(prop, mappingFn) {
                 return this.dataset[prop];
             }
 
+            /* istanbul ignore next */
             return this.getAttribute(toDashed(prop));
         },
         setValue(value) {
@@ -20,6 +21,7 @@ export default function dataset(prop, mappingFn) {
             if (this.dataset) {
                 this.dataset[prop] = val;
             } else {
+                /* istanbul ignore next */
                 this.setAttribute(toDashed(prop), val);
             }
         }
