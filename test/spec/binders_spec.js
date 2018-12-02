@@ -69,6 +69,16 @@ describe('Binders', () => {
         expect(node.innerHTML).toEqual('<b>bar</b>');
     });
 
+    it('should bind html with HTMLElement value', () => {
+        node.innerHTML = '<i>foo</i>';
+        bindNode(obj, 'x', node, html(), noDebounceFlag);
+        const b = window.document.createElement('b');
+        b.textContent = 'bar';
+        obj.x = b;
+        expect(node.innerHTML).toEqual('<b>bar</b>');
+        expect(node.firstChild).toEqual(b);
+    });
+
     it('should bind html and use mapping function', () => {
         node.innerHTML = '<i>foo</i>';
         bindNode(obj, 'x', node, html(mappingFn), noDebounceFlag);

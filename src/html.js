@@ -7,7 +7,12 @@ export default function html(mappingFn) {
         },
         setValue(value) {
             const val = typeof mappingFn === 'function' ? mappingFn(value) : value;
-            this.innerHTML = `${val}`;
+            if (val instanceof window.HTMLElement) {
+                this.innerHTML = '';
+                this.appendChild(val);
+            } else {
+                this.innerHTML = `${val}`;
+            }
         }
     };
 }
