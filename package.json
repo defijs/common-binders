@@ -1,6 +1,6 @@
 {
   "name": "common-binders",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "scripts": {
     "test": "npm run unit-defi && npm run unit && npm run lint",
     "test-run": "babel-node node_modules/.bin/babel-istanbul cover test/index.js",
