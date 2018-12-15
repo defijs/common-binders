@@ -23,7 +23,11 @@ export default function existence(switcher = true) {
                 comment = window.document.createComment(commentText);
             }
 
-            value = !switcher ? !value : value; // eslint-disable-line no-param-reassign
+            if (typeof switcher === 'function') {
+                value = switcher(value); // eslint-disable-line no-param-reassign
+            } else if (!switcher) {
+                value = !value; // eslint-disable-line no-param-reassign
+            }
 
             if (value) {
                 delete node.__matreshkaReplacedByNode;

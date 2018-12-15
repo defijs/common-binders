@@ -77,4 +77,32 @@ describe('Existence binder', () => {
         expect(parent.childNodes[0].nodeName).toEqual('#comment');
         expect(parent.childNodes[0].nodeValue).toEqual('DIV#foo.bar.baz');
     });
+
+    it('should allow to use exitence binder with function as a switcher', () => {
+        node.id = 'foo';
+        node.className = 'bar baz';
+
+        obj.x = 'kek';
+        bindNode(obj, 'x', node, existence(v => v === 'kek'), noDebounceFlag);
+
+        expect(parent.childNodes.length).toEqual(1);
+        expect(parent.childNodes[0].nodeName).toEqual('DIV');
+
+        obj.x = 'lol';
+
+        expect(parent.childNodes.length).toEqual(1);
+        expect(parent.childNodes[0].nodeName).toEqual('#comment');
+        expect(parent.childNodes[0].nodeValue).toEqual('DIV#foo.bar.baz');
+
+        obj.x = 'kek'; // try again
+
+        expect(parent.childNodes.length).toEqual(1);
+        expect(parent.childNodes[0].nodeName).toEqual('DIV');
+
+        obj.x = 'wow'; // try again
+
+        expect(parent.childNodes.length).toEqual(1);
+        expect(parent.childNodes[0].nodeName).toEqual('#comment');
+        expect(parent.childNodes[0].nodeValue).toEqual('DIV#foo.bar.baz');
+    });
 });

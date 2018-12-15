@@ -149,6 +149,15 @@ describe('Binders', () => {
         expect(obj.y).toEqual(true);
         obj.y = false;
         expect(node.style.display).toEqual('');
+
+        node.style.display = 'none';
+        bindNode(obj, 'z', node, display(v => v === 'lol'), noDebounceFlag);
+        obj.z = 'lol';
+        expect(node.style.display).toEqual('');
+        obj.z = 'kek';
+        expect(node.style.display).toEqual('none');
+        obj.z = 'lol';
+        expect(node.style.display).toEqual('');
     });
 
     it('should bind className', () => {
