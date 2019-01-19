@@ -14,8 +14,8 @@
     "release-bundle": "rimraf bundle && deploy-to-git",
     "release": "npm run release-bundle && npm run release-npm",
     "commit": "git-cz",
-    "patch": "npm version patch && npm run release",
-    "minor": "npm version minor && npm run release"
+    "patch": "npm version patch && npm run release && git push --tags",
+    "minor": "npm version minor && npm run release && git push --tags"
   },
   "config": {
     "deployToGit": {
