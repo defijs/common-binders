@@ -38,7 +38,7 @@ The bundle can be downloaded at [gh-pages branch](https://github.com/finom/commo
 -------------
 
 ```
-npm install --save common-binders
+npm i common-binders
 ```
 
 ```js
