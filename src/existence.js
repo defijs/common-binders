@@ -30,7 +30,7 @@ export default function existence(switcher = true) {
             }
 
             if (value) {
-                delete node.__matreshkaReplacedByNode;
+                delete node.__replacedByNode;
                 if (comment.parentNode) {
                     comment.parentNode.insertBefore(node, comment);
                     comment.parentNode.removeChild(comment);
@@ -38,7 +38,7 @@ export default function existence(switcher = true) {
             }
 
             if (!value) {
-                node.__matreshkaReplacedByNode = comment;
+                node.__replacedByNode = comment;
                 if (node.parentNode) {
                     node.parentNode.insertBefore(comment, node);
                     node.parentNode.removeChild(node);

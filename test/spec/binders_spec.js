@@ -1,5 +1,4 @@
-import { bindNode as defiBindNode } from 'defi';
-import { bindNode as matreshkaBindNode } from 'matreshka';
+import { bindNode } from 'defi';
 import {
     html,
     text,
@@ -10,8 +9,6 @@ import {
     style,
     display
 } from '../../src';
-
-const bindNode = process.env.LIBRARY === 'defi' ? defiBindNode : matreshkaBindNode;
 
 describe('Binders', () => {
     const noDebounceFlag = {

@@ -1,8 +1,5 @@
-import { bindNode as defiBindNode } from 'defi';
-import { bindNode as matreshkaBindNode } from 'matreshka';
+import { bindNode } from 'defi';
 import { existence } from '../../src';
-
-const bindNode = process.env.LIBRARY === 'defi' ? defiBindNode : matreshkaBindNode;
 
 describe('Existence binder', () => {
     const noDebounceFlag = {

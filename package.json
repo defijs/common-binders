@@ -5,17 +5,17 @@
     "test": "npm run unit-defi && npm run unit && npm run lint",
     "test-run": "babel-node node_modules/.bin/babel-istanbul cover test/index.js",
     "unit": "npm run test-run && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "unit-defi": "LIBRARY=defi npm run test-run",
     "upgrade": "ncu --upgradeAll && npm install",
-    "lint": "eslint ./test ./src",
+    "lint": "eslint ./test ./src webpack.config.js",
     "compile-npm": "babel src -d .",
     "bundle": "webpack --mode=production",
     "release-npm": "npm run compile-npm && npm publish",
     "release-bundle": "rimraf bundle && deploy-to-git",
     "release": "npm run release-bundle && npm run release-npm",
     "commit": "git-cz",
-    "patch": "npm version patch && npm run release && git push --tags",
-    "minor": "npm version minor && npm run release && git push --tags"
+    "reinstall": "rm -rf node_modules package-lock.json && npm i",
+    "patch": "npm version patch && npm run release && git push && git push --tags",
+    "minor": "npm version minor && npm run release && git push && git push --tags"
   },
   "config": {
     "deployToGit": {
@@ -77,7 +77,7 @@
     "commitizen": "^3.0.5",
     "coveralls": "^3.0.2",
     "cz-simple-conventional-changelog": "0.0.1",
-    "defi": "0.0.25",
+    "defi": "^0.0.29",
     "deploy-to-git": "0.1.5",
     "eslint": "^5.12.1",
     "eslint-config-airbnb-base": "^13.1.0",
@@ -86,7 +86,6 @@
     "jasmine": "^3.3.1",
     "jsdom": "^13.1.0",
     "makeelement": "0.0.4",
-    "matreshka": "^2.4.0",
     "ncp": "^2.0.0",
     "npm-check-updates": "^2.15.0",
     "rimraf": "^2.6.3",
