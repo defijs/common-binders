@@ -1,6 +1,6 @@
 # common-binders bundle
 
-This branch contains minified bundle of [common-binders](https://github.com/finom/common-binders).
+This branch contains a minified bundle of [common-binders](https://github.com/defijs/common-binders).
 
 ```html
 <script src="common-binders.min.js"></script>
@@ -8,7 +8,7 @@ This branch contains minified bundle of [common-binders](https://github.com/fino
 
 ```html
 <!-- do not do this on production -->
-<script src="https://finom.github.io/common-binders/common-binders.min.js">
+<script src="https://defijs.github.io/common-binders/common-binders.min.js">
 </script>
 ```
 
