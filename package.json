@@ -2,7 +2,7 @@
   "name": "common-binders",
   "version": "0.1.2",
   "scripts": {
-    "test": "npm run unit-defi && npm run unit && npm run lint",
+    "test": "npm run unit && npm run unit && npm run lint",
     "test-run": "babel-node node_modules/.bin/babel-istanbul cover test/index.js",
     "unit": "npm run test-run && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "upgrade": "ncu --upgradeAll && npm install",
