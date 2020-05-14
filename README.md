@@ -1,3 +1,5 @@
+The repository is no longer updated. Defi is turned into a monorepo: https://github.com/finom/defi
+
 # common-binders [![npm version](https://badge.fury.io/js/common-binders.svg)](https://badge.fury.io/js/common-binders) [![Build Status](https://travis-ci.org/defijs/common-binders.svg?branch=master)](https://travis-ci.org/defijs/common-binders) [![Coverage Status](https://coveralls.io/repos/github/defijs/common-binders/badge.svg?branch=master)](https://coveralls.io/github/defijs/common-binders?branch=master)
 
 The module includes common binder creators or HTML binding, attribute binding etc. which can be used with [defi.js](https://github.com/defijs/defi).
