@@ -84,7 +84,7 @@
     "eslint-plugin-import": "^2.14.0",
     "ghooks": "^2.0.4",
     "jasmine": "^3.3.1",
-    "jsdom": "^13.1.0",
+    "jsdom": "^16.5.0",
     "makeelement": "0.0.4",
     "ncp": "^2.0.0",
     "npm-check-updates": "^2.15.0",
